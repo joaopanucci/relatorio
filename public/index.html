@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tabela de produtos</h1>
+    <div>
+        <label for="cidadeSelect">Cidade:</label>
+        <select id="cidadeSelect">
+            <option value="">Selecione uma cidade</option>
+            <option value="Campo Grande">Campo Grande</option>
+            <option value="Dourados">Dourados</option>
+            <option value="Três Lagoas">Três Lagoas</option>
+            <option value="Corumbá">Corumbá</option>
+            <option value="Ponta Porã">Ponta Porã</option>
+            <option value="Naviraí">Naviraí</option>
+            <option value="Nova Andradina">Nova Andradina</option>
+            <option value="Paranaíba">Paranaíba</option>
+            <option value="Aquidauana">Aquidauana</option>
+            <option value="Sidrolândia">Sidrolândia</option>
+            <!-- Adicione todas as outras cidades do Mato Grosso do Sul aqui -->
+        </select>
+        <label for="quantidadeInput">Quantidade:</label>
+        <input type="number" id="quantidadeInput" value="0">
+        <button onclick="prepareProductRows()">Preparar produtos</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Cód. de Barras (12 dig.)</th>
+                <th>Nome</th>
+                <th>Cidade</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+        <tbody id="productTable">
+            <!-- Produtos serão adicionados aqui -->
+        </tbody>
+    </table>
+    <button onclick="sendAllProducts()">Enviar todos os produtos</button>
+    <button onclick="generateReport()">Gerar Relatório PDF</button>
+
+    <h2>Importar Produtos via CSV</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="csvFile" name="csvFile" accept=".csv">
+        <button type="button" onclick="uploadCSV()">Upload</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
