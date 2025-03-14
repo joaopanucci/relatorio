@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Projeto de Controle de Estoque
 
 Este projeto tem como objetivo melhorar o controle de estoque no setor público, proporcionando uma interface simples para gerenciar itens de estoque.
@@ -36,3 +37,6 @@ Para iniciar a aplicação, acesse o arquivo `public/index.php` em seu servidor 
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests para melhorias.
+=======
+# relatorio
+>>>>>>> b798d57b2bc5e1bc34b5ae9b3058a5b09be12eb0
